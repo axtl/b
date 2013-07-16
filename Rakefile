@@ -4,10 +4,11 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
+#ssh_user       = "inaequitas@hackd.net"
+ssh_user       = "inaequitas@208.113.173.30"
 ssh_port       = "22"
-document_root  = "~/website.com/"
-rsync_delete   = false
+document_root  = "~/hackd.net/"
+rsync_delete   = true
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
 
@@ -23,8 +24,8 @@ deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
+new_post_ext    = "md"        # default new post file extension when using the new_post task
+new_page_ext    = "md"        # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
 
@@ -109,8 +110,8 @@ task :new_post, :title do |t, args|
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-    post.puts "comments: true"
-    post.puts "categories: "
+    #post.puts "comments: true"
+    #post.puts "categories: "
     post.puts "---"
   end
 end
@@ -141,11 +142,12 @@ task :new_page, :filename do |t, args|
     puts "Creating new page: #{file}"
     open(file, 'w') do |page|
       page.puts "---"
-      page.puts "layout: page"
+      page.puts "layout: default"
       page.puts "title: \"#{title}\""
+      page.puts "heading: \"#{title}\""
       page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-      page.puts "comments: true"
-      page.puts "sharing: true"
+      #page.puts "comments: true"
+      #page.puts "sharing: true"
       page.puts "footer: true"
       page.puts "---"
     end
