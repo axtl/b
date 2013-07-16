@@ -26,14 +26,11 @@ something that often comes through in my writing.
 
 I code mainly in [Sublime Text 2] or [Vim] on either an 11" MacBook Air
 or my R&D [Debian Linux] box. I use [GitHub] for publishing code, and
-[iTerm 2] with [oh-my-zsh] and [tmux] + [teamocil] for extreme sorcery.
+[iTerm 2] with [oh-my-zsh] and [tmux] + [teamocil] for extreme sorcery. I like
+Debian because it keeps things simple and lets me be in control, without much
+fuss.
 
-If I'm writing something other than code, I usually turn to [Byword] on the
-Mac, save to [Dropbox], and continue on iOS in [Textastic] or [iA Writer].
-Textastic also doubles as a pretty solid code editor, and the Markdown support
-is great.
-
-I use [OmniFocus] to make sense of the things going on in my life, and [Reeder]
+I use [OmniFocus] to make sense of the things going on in my life, [Reeder]
 and [Instapaper] to keep track of the things going on in the world.
 
 
@@ -41,7 +38,7 @@ and [Instapaper] to keep track of the things going on in the world.
 
 My 'web stuff' has been around the block a few times, and I think this would
 be version #5. I've been on Blogger, WordPress, Tumblr, and settled now on a
-static site built with [Octopress] and hosted on [GitHub Pages]. I've
+static site built with [Octopress]. I've
 previously sought advanced features and social sugar, but now I realize the
 only thing one needs is a text editor and a domain to host on.
 
